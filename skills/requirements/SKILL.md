@@ -43,20 +43,67 @@ Annahmen explizit.
 ### Funktionale Anforderungen (FA)
 
 Funktionale Anforderungen beschreiben, was das System tun soll.
-Verwende immer eine der folgenden Satzschablonen, um die Anforderungen klar und konsistent zu formulieren:
+Formuliere funktionale Anforderungen nach dem FunktionsMASTER. Jede funktionale
+Anforderung muss einen Betrachtungsgegenstand, eine rechtliche Verbindlichkeit,
+genau ein Prozesswort und genau ein Objekt enthalten. Ergänze eine Bedingung
+nur dann, wenn sie fachlich notwendig ist.
 
-1. Die selbstständige Systemaktivität
-   `[Betrachtungsgegenstand] muss/sollte/wird [Objekt] [Verb].`
-2. Die Benutzerinteraktion
-   `[Betrachtungsgegenstand] muss/sollte/wird [wem?|was?] die Möglichkeit bieten [Objekt] zu [Verb].`
-3. Die Schnittstellenanforderung
-   `[Betrachtungsgegenstand] muss/sollte/wird fähig sein [Objekt] zu [Verb].`
+#### Rechtliche Verbindlichkeit
+
+Verwende die Schlüsselwörter bewusst. Schreibe sie in den Anforderungen
+normal klein, sofern sie nicht am Satzanfang stehen:
+
+- `muss`: verpflichtende Anforderung
+- `sollte`: gewünschte, nicht verpflichtende Anforderung
+- `wird`: zukünftige Absicht, die später verpflichtend werden soll
+
+#### FunktionsMASTER ohne Bedingung
+
+1. Selbsttätige Systemaktivität
+   `[Betrachtungsgegenstand] muss/sollte/wird [Objekt] [Prozesswort].`
+2. Benutzerinteraktion
+   `[Betrachtungsgegenstand] muss/sollte/wird [Akteur] die Möglichkeit bieten, [Objekt] zu [Prozesswort].`
+3. Schnittstellenanforderung
+   `[Betrachtungsgegenstand] muss/sollte/wird fähig sein, [Objekt] zu [Prozesswort].`
+
+#### FunktionsMASTER mit Bedingung
+
+Wenn eine Anforderung nur unter einer logischen oder zeitlichen Bedingung gilt,
+stelle die Bedingung voran und verwende eine der folgenden Konjunktionen:
+
+- `falls`: logische Bedingung oder fachlicher Fall
+- `sobald`: auslösendes Ereignis oder Zeitpunkt
+- `solange`: andauernder Zeitraum oder Zustand
+
+Schablonen mit Bedingung:
+
+1. Selbsttätige Systemaktivität
+   `[Falls/Sobald/Solange Bedingung], muss/sollte/wird [Betrachtungsgegenstand] [Objekt] [Prozesswort].`
+2. Benutzerinteraktion
+   `[Falls/Sobald/Solange Bedingung], muss/sollte/wird [Betrachtungsgegenstand] [Akteur] die Möglichkeit bieten, [Objekt] zu [Prozesswort].`
+3. Schnittstellenanforderung
+   `[Falls/Sobald/Solange Bedingung], muss/sollte/wird [Betrachtungsgegenstand] fähig sein, [Objekt] zu [Prozesswort].`
+
+#### Analysepflicht vor dem Schreiben
+
+Prüfe für jede funktionale Anforderung:
+
+- System: Welcher Betrachtungsgegenstand ist verantwortlich?
+- Verbindlichkeit: Ist die Anforderung Pflicht, Wunsch oder zukünftige Absicht?
+- Funktionstyp: selbsttätige Systemaktivität, Benutzerinteraktion oder Schnittstellenanforderung?
+- Akteur oder Fremdsystem: Wer interagiert mit dem System oder liefert Informationen?
+- Objekt: Was wird verarbeitet, angezeigt, gespeichert, übertragen oder geprüft?
+- Prozesswort: Welches Vollverb beschreibt genau eine Funktion?
+- Bedingung: Gilt die Anforderung immer oder nur falls, sobald oder solange etwas zutrifft?
+
+Vermeide mehrere Prozesswörter in einer Anforderung. Teile zusammengesetzte
+Aussagen wie "suchen und exportieren" in getrennte Anforderungen auf.
 
 | ID     | Titel | Anforderung | Priority | Status |
 |--------|-------|------------|----------|--------|
-| FR-001 | Beispiel | Der Onlineshop muss dem Benutzer die Möglichkeit bieten, Produkte von A-Z zu sortieren. | High | Open |
-| FR-002 | Beispiel | Das Bibliothekssystem muss dem Bibliothekar die Möglichkeit
-bieten, die Kundendaten zu drucken. | Medium | Open |
+| FA-001 | Produktsuche | Der Onlineshop muss dem Kunden die Möglichkeit bieten, Produkte nach Namen zu suchen. | High | Open |
+| FA-002 | Verfügbarkeitsprüfung | Sobald der Kunde ein Produkt in den Warenkorb legt, muss der Onlineshop die Lagerverfügbarkeit prüfen. | High | Open |
+| FA-003 | Zahlungsfreigabe | Der Onlineshop muss fähig sein, Zahlungsfreigaben vom Zahlungsdienstleister zu empfangen. | High | Open |
 
 ### Nicht-funktionale Anforderungen (NFA)
 
@@ -65,8 +112,8 @@ messbar sein.
 
 | ID      | Titel | Anforderung | Category | Priority | Status |
 |---------|-------|-------------|----------|----------|--------|
-| NFR-001 | Beispiel | 95 Prozent aller Seitenaufrufe müssen innerhalb von 2 Sekunden abgeschlossen sein. | Performance | High | Open |
-| NFR-002 | Beispiel | Das System muss während der Servicezeit eine Verfügbarkeit von 99,9 Prozent pro Monat erreichen. | Availability | High | Open |
+| NFA-001 | Antwortzeit | 95 Prozent aller Seitenaufrufe müssen innerhalb von 2 Sekunden abgeschlossen sein. | Performance | High | Open |
+| NFA-002 | Verfügbarkeit | Das System muss während der Servicezeit eine Verfügbarkeit von 99,9 Prozent pro Monat erreichen. | Availability | High | Open |
 
 ### Randbedingungen (RB)
 
@@ -74,13 +121,13 @@ Randbedingungen beschreiben Grenzen, Vorgaben oder Einschränkungen der Lösung.
 
 | ID    | Titel | Randbedingung | Category | Priority | Status |
 |-------|-------|---------------|----------|----------|--------|
-| RB-001 | Beispiel | Die Anwendung muss an das bestehende Identity-Management angebunden werden. | Technical | High | Open |
-| RB-002 | Beispiel | Die erste produktive Version muss bis Ende Q2 bereitgestellt werden. | Schedule | High | Open |
+| R-001 | Identity Management | Die Anwendung muss an das bestehende Identity-Management angebunden werden. | Technical | High | Open |
+| R-002 | Go-live | Die erste produktive Version muss bis Ende Q2 bereitgestellt werden. | Schedule | High | Open |
 
 ## Reference
 
 Siehe `REFERENCE.md` für ID-Präfixe, zulässige Werte für `Priority` und
-`Status` sowie die vorgesehenen NFR- und Randbedingungs-Kategorien. Verwende diese
+`Status` sowie die vorgesehenen NFA- und Randbedingungs-Kategorien. Verwende diese
 Werte konsistent und unverändert in den Tabellen.
 
 ## Requirement Quality Checks
@@ -93,11 +140,12 @@ Jede Anforderung muss vor der Finalisierung diese Checks bestehen:
 | Singulär | Eine Tabellenzeile enthält genau eine Anforderung | System soll Login und Export bieten | Zwei getrennte Anforderungen |
 | Eindeutig | Keine subjektiven oder unklaren Begriffe | Benutzerfreundliche Oberfläche | WCAG 2.1 AA für Kernabläufe |
 | Testbar | Es muss ein Pass/Fail-Test ableitbar sein | System ist zuverlässig | 99,9 Prozent Verfügbarkeit über 30 Tage |
-| Eindeutige IDs | Keine doppelten IDs in irgendeiner Tabelle | Zwei Mal FR-001 | Jede ID wird genau einmal verwendet |
+| Eindeutige IDs | Keine doppelten IDs in irgendeiner Tabelle | Zwei Mal FA-001 | Jede ID wird genau einmal verwendet |
+| MASTER-konform | Funktionale Anforderungen enthalten System, Verbindlichkeit, Funktionstyp, Objekt und genau ein Prozesswort | Das System muss Bestellungen suchen und exportieren. | Das System muss dem Sachbearbeiter die Möglichkeit bieten, Bestellungen zu suchen. |
 
 ## Error Recovery
 
-- Unvollständige Quelle: Liste fehlende Rollen, NFR-Kategorien oder Randbedingungen auf und bitte nur dann um Klärung, wenn eine belastbare Ausarbeitung sonst nicht möglich ist
+- Unvollständige Quelle: Liste fehlende Rollen, NFA-Kategorien oder Randbedingungen auf und bitte nur dann um Klärung, wenn eine belastbare Ausarbeitung sonst nicht möglich ist
 - Mehrdeutige Anforderung: Formuliere sie in eine messbare Variante um und markiere den Schwellenwert als Annahme, falls keine Rückfrage möglich ist
 - Widersprüchliche Anforderungen: Weise explizit auf den Konflikt hin, zum Beispiel zwischen Echtzeit-Anforderung und Batch-Randbedingung
 - Fehlende Stakeholder-Rollen: Verwende vorläufig generische Rollen wie Benutzer, Administrator und System und kennzeichne sie zur späteren Validierung
@@ -105,14 +153,15 @@ Jede Anforderung muss vor der Finalisierung diese Checks bestehen:
 ## Workflow
 
 1. Lies `docs/vision.md` oder das vorhandene Projektbriefing
-2. Identifiziere Rollen, Ziele, NFR-Kategorien und Randbedingungen
+2. Identifiziere Rollen, Ziele, NFA-Kategorien und Randbedingungen
 3. Erstelle den Dokumentkopf in `docs/requirements.md`
-4. Erfasse funktionale Anforderungen mit Satzschablonen mit `Priority` und `Status`
-5. Erfasse nicht-funktionale Anforderungen mit messbaren Zielwerten, `Category`, `Priority` und `Status`
-6. Erfasse Randbedingungen mit `Category`, `Priority` und `Status`
-7. Prüfe alle Anforderungen gegen die Quality Checks
-8. Stelle sicher, dass keine ID doppelt vorkommt und keine `Status`-Zelle leer bleibt
-9. Markiere Annahmen, Konflikte und offene Fragen explizit
+4. Analysiere funktionale Anforderungen nach System, Verbindlichkeit, Funktionstyp, Akteur/Fremdsystem, Objekt, Prozesswort und optionaler Bedingung
+5. Erfasse funktionale Anforderungen nach dem FunktionsMASTER mit `Priority` und `Status`
+6. Erfasse nicht-funktionale Anforderungen mit messbaren Zielwerten, `Category`, `Priority` und `Status`
+7. Erfasse Randbedingungen mit `Category`, `Priority` und `Status`
+8. Prüfe alle Anforderungen gegen die Quality Checks
+9. Stelle sicher, dass keine ID doppelt vorkommt und keine `Status`-Zelle leer bleibt
+10. Markiere Annahmen, Konflikte und offene Fragen explizit
 
 ## Standardstruktur für `docs/requirements.md`
 
