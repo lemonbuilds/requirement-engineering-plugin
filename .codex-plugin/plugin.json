@@ -1,0 +1,42 @@
+{
+  "name": "requirements-engineer",
+  "version": "0.2.0",
+  "description": "Erfasst, strukturiert und dokumentiert Software-Anforderungen, Use-Case-Diagramme und Use-Case-Spezifikationen.",
+  "author": {
+    "name": "Local User",
+    "email": "local@example.com",
+    "url": "https://example.com"
+  },
+  "homepage": "https://example.com/requirements-engineer",
+  "repository": "https://example.com/requirements-engineer",
+  "license": "Proprietary",
+  "keywords": [
+    "requirements",
+    "prd",
+    "user-stories",
+    "use-cases",
+    "specification"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Requirements Engineer",
+    "shortDescription": "Erstellt Anforderungen, Use-Case-Diagramme und detaillierte Use-Case-Spezifikationen",
+    "longDescription": "Nutze dieses Plugin, um Anforderungen zu erheben, zu strukturieren und in saubere Kataloge, PlantUML-Use-Case-Diagramme und vollstaendige Use-Case-Spezifikationen zu ueberfuehren.",
+    "developerName": "Local User",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://example.com/requirements-engineer",
+    "privacyPolicyURL": "https://example.com/privacy",
+    "termsOfServiceURL": "https://example.com/terms",
+    "defaultPrompt": [
+      "Schreibe einen Anforderungskatalog fuer dieses Feature.",
+      "Erstelle ein PlantUML-Use-Case-Diagramm auf Basis der Anforderungen.",
+      "Dokumentiere einen Use Case mit Hauptablauf, Alternativablaeufen und Postconditions."
+    ],
+    "screenshots": [],
+    "brandColor": "#0F766E"
+  }
+}
