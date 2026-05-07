@@ -126,9 +126,10 @@ Randbedingungen beschreiben Grenzen, Vorgaben oder Einschränkungen der Lösung.
 
 ## Reference
 
-Siehe `REFERENCE.md` für ID-Präfixe, zulässige Werte für `Priority` und
-`Status` sowie die vorgesehenen NFA- und Randbedingungs-Kategorien. Verwende diese
-Werte konsistent und unverändert in den Tabellen.
+Siehe `references/requirements-reference.md` für ID-Präfixe, zulässige Werte
+für `Priority` und `Status` sowie die vorgesehenen NFA- und
+Randbedingungs-Kategorien. Verwende diese Werte konsistent und unverändert in
+den Tabellen.
 
 ## Requirement Quality Checks
 
