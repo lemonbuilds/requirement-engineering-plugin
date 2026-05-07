@@ -112,9 +112,47 @@ Use a spike only for learning. Add a timebox and decision output:
 
 ## Output Example
 
-| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Priorität | Status |
-|----|------|-------|------------|--------------------|------------|--------|
-| US-001 | Registrierung | Neukunde | Als Neukunde möchte ich ein Konto mit E-Mail-Adresse erstellen, damit ich Bestellungen dauerhaft verwalten kann. | Given eine noch nicht registrierte E-Mail-Adresse, When der Neukunde die Registrierung absendet, Then erstellt das System ein Kundenkonto und sendet eine Bestätigungs-E-Mail. | High | Ready |
+Story index table:
+
+| ID | Epic | Rolle | Titel | Datei | Priorität | Status |
+|----|------|-------|-------|-------|-----------|--------|
+| US-001 | Registrierung | Neukunde | Konto erstellen | [US-001-konto-erstellen.md](US-001-konto-erstellen.md) | High | Ready |
+
+Story file `docs/user_stories/US-001-konto-erstellen.md`:
+
+````markdown
+# User Story: Konto erstellen
+
+| Feld | Wert |
+|------|------|
+| ID | US-001 |
+| Epic | Registrierung |
+| Rolle | Neukunde |
+| Priorität | High |
+| Status | Ready |
+
+## User Story
+
+Als Neukunde möchte ich ein Konto mit E-Mail-Adresse erstellen, damit ich
+Bestellungen dauerhaft verwalten kann.
+
+## Akzeptanzkriterien
+
+```gherkin
+Given eine noch nicht registrierte E-Mail-Adresse
+When der Neukunde die Registrierung absendet
+Then erstellt das System ein Kundenkonto
+And sendet eine Bestätigungs-E-Mail
+```
+
+## Traceability
+
+- Quelle: FA-001
+
+## Abhängigkeiten, Risiken und offene Fragen
+
+- Keine bekannt.
+````
 
 ## Review Smells
 

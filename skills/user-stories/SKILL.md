@@ -24,18 +24,30 @@ necessary, and traceable.
 
 ## Default Output
 
-Create or update `docs/user_stories/user-stories.md` unless the user gives
-another target. Create `docs/user_stories/` if it does not exist.
-When a backlog already exists, preserve existing IDs and append or update
-stories without renumbering unrelated entries.
+Create or update `docs/user_stories/user-stories.md` as the story index unless
+the user gives another target. Create `docs/user_stories/` if it does not
+exist. Create one separate file per story in the same folder using the filename
+format `US-XXX-short-name.md`, for example
+`docs/user_stories/US-001-konto-erstellen.md`.
 
-Use this Markdown structure:
+When a backlog already exists, preserve existing IDs, filenames, links, and
+status values. Append or update stories without renumbering unrelated entries.
+
+Use this Markdown structure for the index:
 
 1. Context and assumptions
 2. Personas or roles
 3. Epics
-4. User stories
-5. Acceptance criteria
+4. Story overview table with links to story files
+5. Dependencies, risks, and open questions
+
+Use this Markdown structure for each story file:
+
+1. Title
+2. Metadata
+3. User story
+4. Acceptance criteria
+5. Traceability
 6. Dependencies, risks, and open questions
 
 ## Story Format
@@ -44,10 +56,20 @@ Use this story template unless the project already uses another one:
 
 `Als <Rolle> möchte ich <Ziel/Fähigkeit>, damit <Nutzen/Wert>.`
 
-For each story include:
+In the index, include one row per story:
 
-| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Priorität | Status |
-|----|------|-------|------------|--------------------|------------|--------|
+| ID | Epic | Rolle | Titel | Datei | Priorität | Status |
+|----|------|-------|-------|-------|-----------|--------|
+
+In each story file, include:
+
+| Feld | Wert |
+|------|------|
+| ID | US-001 |
+| Epic | Registrierung |
+| Rolle | Neukunde |
+| Priorität | High |
+| Status | Ready |
 
 Use IDs such as `US-001`, `US-002`. Use priority values `High`, `Medium`, or
 `Low` and status values `Open`, `Ready`, `In Progress`, `Done`, or `Blocked`,
@@ -73,11 +95,16 @@ behavior, not implementation details.
 2. Identify actors, goals, business value, constraints, dependencies, and terms.
 3. Derive epics only when they help group multiple stories.
 4. Write one user goal per story. Split compound goals.
-5. Add acceptance criteria that cover the main success path and important
-   alternatives or error cases.
-6. Check each story against INVEST and requirements quality criteria.
-7. Mark assumptions, conflicts, and open questions explicitly.
-8. Preserve traceability to source requirements or use cases when source IDs are
+5. Create or update `docs/user_stories/user-stories.md` as the index.
+6. Create or update one `docs/user_stories/US-XXX-short-name.md` file per
+   story.
+7. Add acceptance criteria in the story file that cover the main success path
+   and important alternatives or error cases.
+8. Check each story against INVEST and requirements quality criteria.
+9. Link every story file from the index and keep filenames stable after first
+   creation.
+10. Mark assumptions, conflicts, and open questions explicitly.
+11. Preserve traceability to source requirements or use cases when source IDs are
    available.
 
 ## Quality Checks
@@ -105,6 +132,8 @@ Before finalizing, verify every story:
 - Omit acceptance criteria for stories intended to be implementation-ready
 - Invent legal, compliance, or business rules without marking them as
   assumptions
+- Put full acceptance criteria into the index when separate story files are
+  being created
 
 ## Reference
 
