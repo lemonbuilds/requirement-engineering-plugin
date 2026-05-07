@@ -42,11 +42,11 @@ Use this Markdown structure:
 
 Use this story template unless the project already uses another one:
 
-`Als <Rolle> moechte ich <Ziel/Faehigkeit>, damit <Nutzen/Wert>.`
+`Als <Rolle> möchte ich <Ziel/Fähigkeit>, damit <Nutzen/Wert>.`
 
 For each story include:
 
-| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Prioritaet | Status |
+| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Priorität | Status |
 |----|------|-------|------------|--------------------|------------|--------|
 
 Use IDs such as `US-001`, `US-002`. Use priority values `High`, `Medium`, or

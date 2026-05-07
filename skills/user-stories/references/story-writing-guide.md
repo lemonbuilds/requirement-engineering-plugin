@@ -7,7 +7,7 @@ must express a role, a goal or capability, and a reason that explains the value.
 
 Prefer this German template:
 
-`Als <Rolle> moechte ich <Ziel/Faehigkeit>, damit <Nutzen/Wert>.`
+`Als <Rolle> möchte ich <Ziel/Fähigkeit>, damit <Nutzen/Wert>.`
 
 Use a different template only when the project already has one. Keep the same
 semantic parts: actor, intent, value.
@@ -17,13 +17,13 @@ semantic parts: actor, intent, value.
 Check stories and acceptance criteria against these criteria:
 
 - Eindeutig: Terms have one meaning in the project context.
-- Verstaendlich: Stakeholders can understand the story without technical
+- Verständlich: Stakeholders can understand the story without technical
   translation.
-- Vollstaendig genug: The story has the necessary context for the current
+- Vollständig genug: The story has the necessary context for the current
   refinement level.
 - Konsistent: No contradiction with other stories, requirements, business rules,
   or constraints.
-- Pruefbar: Acceptance criteria allow a clear pass/fail decision.
+- Prüfbar: Acceptance criteria allow a clear pass/fail decision.
 - Realisierbar: The story does not demand impossible behavior under known
   constraints.
 - Notwendig: The story contributes to an explicit user or business objective.
@@ -96,25 +96,25 @@ the team explicitly manages technical enabler stories.
 
 Functional user story:
 
-`Als Sachbearbeiter moechte ich Kundenauftraege nach Status filtern, damit ich offene Auftraege schneller bearbeiten kann.`
+`Als Sachbearbeiter möchte ich Kundenaufträge nach Status filtern, damit ich offene Aufträge schneller bearbeiten kann.`
 
 Enabler story:
 
 Use enabler stories sparingly. State the enabled user or business outcome:
 
-`Als Entwicklungsteam moechten wir die Zahlungsanbieter-Sandbox anbinden, damit Zahlungsablaeufe vor der Produktivschaltung testbar sind.`
+`Als Entwicklungsteam möchten wir die Zahlungsanbieter-Sandbox anbinden, damit Zahlungsabläufe vor der Produktivschaltung testbar sind.`
 
 Spike:
 
 Use a spike only for learning. Add a timebox and decision output:
 
-`Als Produktteam moechten wir die regulatorischen Anforderungen an Identitaetspruefung klaeren, damit wir den Registrierungsprozess belastbar schneiden koennen.`
+`Als Produktteam möchten wir die regulatorischen Anforderungen an Identitätsprüfung klären, damit wir den Registrierungsprozess belastbar schneiden können.`
 
 ## Output Example
 
-| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Prioritaet | Status |
+| ID | Epic | Rolle | User Story | Akzeptanzkriterien | Priorität | Status |
 |----|------|-------|------------|--------------------|------------|--------|
-| US-001 | Registrierung | Neukunde | Als Neukunde moechte ich ein Konto mit E-Mail-Adresse erstellen, damit ich Bestellungen dauerhaft verwalten kann. | Given eine noch nicht registrierte E-Mail-Adresse, When der Neukunde die Registrierung absendet, Then erstellt das System ein Kundenkonto und sendet eine Bestaetigungs-E-Mail. | High | Ready |
+| US-001 | Registrierung | Neukunde | Als Neukunde möchte ich ein Konto mit E-Mail-Adresse erstellen, damit ich Bestellungen dauerhaft verwalten kann. | Given eine noch nicht registrierte E-Mail-Adresse, When der Neukunde die Registrierung absendet, Then erstellt das System ein Kundenkonto und sendet eine Bestätigungs-E-Mail. | High | Ready |
 
 ## Review Smells
 
