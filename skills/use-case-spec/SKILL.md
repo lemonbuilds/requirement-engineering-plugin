@@ -32,9 +32,9 @@ Name the output file `UC-XXX-short-name.md`, for example
 Each use case must describe one complete interaction between an actor and the
 system to achieve a goal.
 
-Base the specification on `docs/requirements.md` and `docs/use_cases.puml`
-when both files exist. If one source is missing, continue with the available
-source and mark assumptions explicitly.
+Base the specification on `docs/requirements/requirements.md` and
+`docs/use_case_diagramm/use_cases.puml` when both files exist. If one source is
+missing, continue with the available source and mark assumptions explicitly.
 
 ## DO NOT
 

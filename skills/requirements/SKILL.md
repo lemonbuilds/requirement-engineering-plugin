@@ -21,15 +21,15 @@ andere Sprache.
 
 ## Instructions
 
-Erstelle oder aktualisiere den Anforderungskatalog in `docs/requirements.md`
-auf Basis von `docs/vision.md`.
+Erstelle oder aktualisiere den Anforderungskatalog in
+`docs/requirements/requirements.md` auf Basis von `docs/vision/vision.md`.
 
 Das Dokument enthält funktionale Anforderungen, nicht-funktionale
 Anforderungen und Randbedingungen in getrennten Markdown-Tabellen.
 
-Wenn kein `docs/vision.md` vorhanden ist, nutze stattdessen das Briefing,
-die User-Nachricht oder vorhandene Projektnotizen als Quelle und markiere
-Annahmen explizit.
+Wenn kein `docs/vision/vision.md` vorhanden ist, nutze stattdessen das
+Briefing, die User-Nachricht oder vorhandene Projektnotizen als Quelle und
+markiere Annahmen explizit.
 
 ## DO NOT
 
@@ -153,18 +153,19 @@ Jede Anforderung muss vor der Finalisierung diese Checks bestehen:
 
 ## Workflow
 
-1. Lies `docs/vision.md` oder das vorhandene Projektbriefing
+1. Lies `docs/vision/vision.md` oder das vorhandene Projektbriefing
 2. Identifiziere Rollen, Ziele, NFA-Kategorien und Randbedingungen
-3. Erstelle den Dokumentkopf in `docs/requirements.md`
-4. Analysiere funktionale Anforderungen nach System, Verbindlichkeit, Funktionstyp, Akteur/Fremdsystem, Objekt, Prozesswort und optionaler Bedingung
-5. Erfasse funktionale Anforderungen nach dem FunktionsMASTER mit `Priority` und `Status`
-6. Erfasse nicht-funktionale Anforderungen mit messbaren Zielwerten, `Category`, `Priority` und `Status`
-7. Erfasse Randbedingungen mit `Category`, `Priority` und `Status`
-8. Prüfe alle Anforderungen gegen die Quality Checks
-9. Stelle sicher, dass keine ID doppelt vorkommt und keine `Status`-Zelle leer bleibt
-10. Markiere Annahmen, Konflikte und offene Fragen explizit
+3. Erstelle `docs/requirements/` falls der Ordner nicht existiert
+4. Erstelle den Dokumentkopf in `docs/requirements/requirements.md`
+5. Analysiere funktionale Anforderungen nach System, Verbindlichkeit, Funktionstyp, Akteur/Fremdsystem, Objekt, Prozesswort und optionaler Bedingung
+6. Erfasse funktionale Anforderungen nach dem FunktionsMASTER mit `Priority` und `Status`
+7. Erfasse nicht-funktionale Anforderungen mit messbaren Zielwerten, `Category`, `Priority` und `Status`
+8. Erfasse Randbedingungen mit `Category`, `Priority` und `Status`
+9. Prüfe alle Anforderungen gegen die Quality Checks
+10. Stelle sicher, dass keine ID doppelt vorkommt und keine `Status`-Zelle leer bleibt
+11. Markiere Annahmen, Konflikte und offene Fragen explizit
 
-## Standardstruktur für `docs/requirements.md`
+## Standardstruktur für `docs/requirements/requirements.md`
 
 Das Ergebnis soll standardmässig diese Abschnitte enthalten:
 

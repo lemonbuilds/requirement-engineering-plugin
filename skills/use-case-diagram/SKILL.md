@@ -12,7 +12,9 @@ description: >
 
 ## Instructions
 
-Create or update the PlantUML use case diagram at `docs/use_cases.puml` based on `docs/requirements.md`.
+Create or update the PlantUML use case diagram at
+`docs/use_case_diagramm/use_cases.puml` based on
+`docs/requirements/requirements.md`.
 
 ## DO NOT
 
@@ -53,12 +55,13 @@ user --> UC003
 
 ## Workflow
 
-1. Read the requirements at `docs/requirements.md`
-2. Read existing diagram at `docs/use_cases.puml` (if exists)
+1. Read the requirements at `docs/requirements/requirements.md`
+2. Read existing diagram at `docs/use_case_diagramm/use_cases.puml` (if exists)
 3. Identify actors and use cases from requirements
-4. Create/update the PlantUML use case diagram
-5. Validate the diagram:
-    - Each use case traces to at least one functional requirement in `docs/requirements.md`
+4. Create `docs/use_case_diagramm/` if it does not exist
+5. Create/update the PlantUML use case diagram
+6. Validate the diagram:
+    - Each use case traces to at least one functional requirement in `docs/requirements/requirements.md`
     - All actors are connected to at least one use case
     - Use case IDs follow the UC-{3-digit} convention
     - PlantUML syntax is valid (no missing `@enduml`, proper arrow syntax)

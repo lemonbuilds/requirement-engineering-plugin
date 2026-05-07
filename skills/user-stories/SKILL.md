@@ -24,7 +24,8 @@ necessary, and traceable.
 
 ## Default Output
 
-Create or update `docs/user-stories.md` unless the user gives another target.
+Create or update `docs/user_stories/user-stories.md` unless the user gives
+another target. Create `docs/user_stories/` if it does not exist.
 When a backlog already exists, preserve existing IDs and append or update
 stories without renumbering unrelated entries.
 
@@ -67,8 +68,8 @@ behavior, not implementation details.
 
 ## Workflow
 
-1. Read `docs/vision.md`, `docs/requirements.md`, `docs/use_cases/`, existing
-   backlog files, or the user briefing.
+1. Read `docs/vision/vision.md`, `docs/requirements/requirements.md`,
+   `docs/use_cases/`, existing backlog files, or the user briefing.
 2. Identify actors, goals, business value, constraints, dependencies, and terms.
 3. Derive epics only when they help group multiple stories.
 4. Write one user goal per story. Split compound goals.
