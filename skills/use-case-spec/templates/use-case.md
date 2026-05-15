@@ -1,42 +1,72 @@
-# Use Case: [Use Case Name]
+# Use Case: [Name]
 
-## Overview
+## ID
 
-**Use Case ID:** UC-XXX
-**Use Case Name:** [Descriptive Name]
-**Primary Actor:** [Role]
-**Goal:** [What the actor wants to achieve]
-**Status:** Draft | Review | Approved | Implemented | Tested | Done | Obsolete
+UC-XXX
 
-## Preconditions
+## Name
 
-- [Condition that must be true before the use case starts]
+[Beschreibender Name]
 
-## Main Success Scenario
+## Autoren
 
-1. [Actor action or system response]
-2. [Next step]
-3. [Continue until goal is achieved]
+- [Name oder Rolle]
 
-## Alternative Flows
+## Status
 
-### A1: [Alternative Flow Name]
+Draft | Review | Approved | Implemented | Tested | Done | Obsolete
 
-**Trigger:** [Condition that triggers this flow]
-**Flow:**
+## Auslösendes Ereignis
 
-1. [Step that diverges from the main flow]
-2. [Continuation or return to the main flow]
+[Ereignis, das den Use Case startet]
 
-## Postconditions
+## Akteure
 
-### Success Postconditions
+- Primärakteur: [Rolle]
+- Sekundärakteure: [Weitere beteiligte Rollen oder Systeme]
 
-- [State of the system after successful completion]
+## Ziel
 
-### Failure Postconditions
+[Ziel, das der Primärakteur mit diesem Use Case erreichen will]
 
-- [State of the system if the use case fails]
+## Vorbedingungen
+
+- [Bedingung, die vor Start des Use Cases erfüllt sein muss]
+
+## Ergebnis
+
+- [Beobachtbarer Zustand nach erfolgreichem Abschluss]
+- [Relevanter Zustand bei Abbruch oder Fehler, falls zutreffend]
+
+## Hauptszenario
+
+1. [Aktion des Akteurs oder beobachtbare Systemreaktion]
+2. [Nächster Schritt]
+3. [Fortsetzen, bis das Ziel erreicht ist]
+
+## Alternativszenarien
+
+### A1: [Name des Alternativszenarios]
+
+- Auslöser: [Bedingung, die dieses Szenario auslöst]
+- Ablauf:
+  1. [Schritt, der vom Hauptszenario abweicht]
+  2. [Fortsetzung oder Rückkehr ins Hauptszenario]
+
+## Ausnahmeszenarien
+
+### E1: [Name des Ausnahmeszenarios]
+
+- Auslöser: [Fehler, ungültige Eingabe, fehlende Berechtigung oder Abbruch]
+- Ablauf:
+  1. [Systemreaktion oder Akteurshandlung]
+  2. [Endzustand oder Rückkehrpunkt]
+
+## Ergänzende Punkte
+
+- Annahme: [Explizite Annahme]
+- Offene Frage: [Noch zu klärender Punkt]
+- Quelle: [Anforderung, Use-Case-Diagramm oder Stakeholder-Hinweis]
 
 ## Business Rules
 

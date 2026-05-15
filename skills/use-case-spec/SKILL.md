@@ -1,158 +1,203 @@
 ---
 name: use-case-spec
 description: >
-  Creates detailed use case specification documents with actors, preconditions,
-  main success scenarios, alternative flows, postconditions, and business rules.
-  Use when the user asks to "write a use case", "specify a use case", "document
-  system behavior", "define scenarios", "write a functional spec", or mentions
-  use case specification, acceptance criteria, or user scenarios.
+  Creates detailed German use case specification documents with ID, name,
+  authors, status, triggering event, actors, goal, preconditions, result, main
+  scenario, alternative scenarios, exception scenarios, supplementary points,
+  business rules, and reference guidance. Use when the user asks to "write a use
+  case", "specify a use case", "document system behavior", "define scenarios",
+  "write a functional spec", or mentions use case specification.
 ---
 
 # Use Case Specification
 
 ## Purpose
 
-This skill creates or updates a single detailed use case specification for
-$ARGUMENTS in `docs/use_cases/`.
+Dieser Skill erstellt oder aktualisiert genau eine detaillierte
+Use-Case-Beschreibung für $ARGUMENTS in `docs/use_cases/`.
 
-Prefer the language already used in the project documents. If the surrounding
-requirements are in German, write the use case in German unless the user asks
-for another language explicitly.
+Schreibe Use-Case-Beschreibungen standardmässig auf Deutsch, ausser der User
+fordert ausdrücklich eine andere Sprache.
 
 ## Instructions
 
-Create or update exactly one use case specification document for $ARGUMENTS in
+Erstelle oder aktualisiere genau eine Use-Case-Beschreibung für $ARGUMENTS in
 `docs/use_cases/`.
 
-Use [templates/use-case.md](templates/use-case.md) as the structure.
+Verwende [templates/use-case.md](templates/use-case.md) als verbindliche
+Struktur.
 
-Name the output file `UC-XXX-short-name.md`, for example
+Benenne die Ausgabedatei `UC-XXX-short-name.md`, zum Beispiel
 `docs/use_cases/UC-012-bestellung-im-kundenauftrag-abschliessen.md`.
 
-Each use case must describe one complete interaction between an actor and the
-system to achieve a goal.
+Jede Use-Case-Beschreibung muss eine vollständige Interaktion zwischen einem
+oder mehreren Akteuren und dem System beschreiben, um ein Ziel zu erreichen.
 
-Base the specification on `docs/requirements/requirements.md` and
-`docs/use_case_diagramm/use_cases.puml` when both files exist. If one source is
-missing, continue with the available source and mark assumptions explicitly.
+Nutze `docs/requirements/requirements.md` und
+`docs/use_case_diagramm/use_cases.puml` als Quellen, wenn beide Dateien
+existieren. Wenn eine Quelle fehlt, arbeite mit der vorhandenen Quelle weiter
+und kennzeichne Annahmen ausdrücklich.
 
 ## DO NOT
 
-- Write vague or incomplete scenarios
-- Skip numbering steps in the Main Success Scenario
-- Omit alternative flows for error conditions
-- Leave postconditions undefined
-- Mix multiple use cases in one document
-- Use technical implementation details in the flow steps
+- Vage oder unvollständige Szenarien schreiben
+- Nummerierte Schritte im `Hauptszenario` weglassen
+- Relevante Alternativ- oder Ausnahmeszenarien weglassen
+- `Ergebnis` undefiniert lassen
+- Mehrere Use Cases in einem Dokument vermischen
+- Technische Implementierungsdetails in Ablaufschritten verwenden
 
 ## Workflow
 
-1. Read the requirements document and the use case diagram
-2. Identify the one use case to document
-3. Create `docs/use_cases/` if it does not exist
-4. Write the Overview section with actor and goal
-5. Define preconditions that must be true before the use case starts
-6. Write the Main Success Scenario as numbered actor and system interactions
-7. Identify alternative flows:
-   - Error conditions
-   - Optional paths
-   - Exceptional situations
-8. Define postconditions for both success and failure
-9. Document applicable business rules
-10. Review the document for completeness, clarity, and traceability
+1. Lies das Anforderungsdokument und das Use-Case-Diagramm
+2. Identifiziere genau den einen zu dokumentierenden Use Case
+3. Erstelle `docs/use_cases/`, falls der Ordner nicht existiert
+4. Fülle die Pflichtabschnitte in dieser Reihenfolge: ID, Name, Autoren, Status,
+   Auslösendes Ereignis, Akteure, Ziel, Vorbedingungen, Ergebnis,
+   Hauptszenario, Alternativszenarien, Ausnahmeszenarien, Ergänzende Punkte,
+   Business Rules, Reference
+5. Definiere Vorbedingungen, die vor Start des Use Cases erfüllt sein müssen
+6. Schreibe das `Hauptszenario` als nummerierte Interaktion zwischen Akteur und System
+7. Identifiziere `Alternativszenarien` für optionale oder gültige Varianten
+8. Identifiziere `Ausnahmeszenarien` für Fehler, ungültige Eingaben, fehlende
+   Berechtigungen, nicht verfügbare Systeme oder abgebrochene Abläufe
+9. Beschreibe das `Ergebnis` als beobachtbaren Zustand nach erfolgreichem
+   Abschluss und relevante Zustände bei Fehler oder Abbruch
+10. Dokumentiere Annahmen, Hinweise, Traceability und offene Fragen unter
+    `Ergänzende Punkte`
+11. Dokumentiere fachliche Regeln separat unter `Business Rules`
+12. Behalte Statuswerte und Schreibregeln unter `Reference` bei
+13. Prüfe die Beschreibung auf Vollständigkeit, Klarheit und Nachvollziehbarkeit
 
 ## Quality Checks
 
-- The use case has exactly one `Use Case ID`
-- The main flow is numbered and reaches the actor goal
-- Alternative flows reference a clear trigger and a re-entry or end condition
-- Success and failure postconditions are both present
-- Business rules are concrete and relevant to this use case
-- Steps describe user-visible behavior, not implementation internals
+- Der Use Case hat genau eine `ID`
+- Die Abschnitte folgen der verbindlichen deutschen Struktur und Benennung
+- `Status` verwendet einen der Werte aus `Reference`
+- `Auslösendes Ereignis`, `Akteure`, `Ziel`, `Vorbedingungen` und `Ergebnis`
+  sind konkret und überprüfbar
+- Das `Hauptszenario` ist nummeriert und erreicht das Ziel des Akteurs
+- Alternativ- und Ausnahmeszenarien nennen einen klaren Auslöser und einen
+  Rücksprungpunkt oder Endzustand
+- Ergänzende Punkte sind konkret und für diesen Use Case relevant
+- Business Rules stehen in einem separaten Abschnitt und sind nicht unter
+  `Ergänzende Punkte` vermischt
+- Schritte beschreiben beobachtbares Verhalten, keine Implementierungsdetails
 
 ## Example Use Case
 
-# Use Case: Create Reservation
+# Use Case: Reservierung erstellen
 
-## Overview
+## ID
 
-**Use Case ID:** UC-001
-**Use Case Name:** Create Reservation
-**Primary Actor:** Front Desk Clerk
-**Goal:** Create a new room reservation for a guest
-**Status:** Approved
+UC-001
 
-## Preconditions
+## Name
 
-- Clerk is logged into the system
-- At least one room type is available for the requested dates
+Reservierung erstellen
 
-## Main Success Scenario
+## Autoren
 
-1. Clerk selects "New Reservation" from the menu.
-2. System displays the reservation form.
-3. Clerk enters guest information (name, email, phone).
-4. Clerk selects check-in and check-out dates.
-5. System displays available room types for the selected dates.
-6. Clerk selects a room type.
-7. System calculates the total price.
-8. Clerk confirms the reservation.
-9. System creates the reservation and displays a confirmation number.
+- Requirements Engineer
 
-## Alternative Flows
+## Status
 
-### A1: Guest Already Exists
+Draft
 
-**Trigger:** Guest email matches existing record (step 3)
-**Flow:**
+## Auslösendes Ereignis
 
-1. System displays existing guest information.
-2. Clerk confirms or updates guest details.
-3. Use case continues at step 4.
+Ein Rezeptionsmitarbeiter startet die Erstellung einer neuen Reservierung.
 
-### A2: No Rooms Available
+## Akteure
 
-**Trigger:** No rooms available for selected dates (step 5)
-**Flow:**
+- Primärakteur: Rezeptionsmitarbeiter
+- Sekundärakteur: Gast
 
-1. System displays "No availability" message.
-2. Clerk adjusts dates or cancels operation.
-3. Use case continues at step 4 or ends.
+## Ziel
 
-### A3: Payment Required
+Der Rezeptionsmitarbeiter erstellt eine verbindliche Zimmerreservierung für
+einen Gast.
 
-**Trigger:** Business rule requires deposit (step 8)
-**Flow:**
+## Vorbedingungen
 
-1. System prompts for payment information.
-2. Clerk enters payment details.
-3. System processes payment.
-4. Use case continues at step 9.
+- Der Rezeptionsmitarbeiter ist am System angemeldet.
+- Für den gewünschten Zeitraum ist mindestens eine Zimmerkategorie verfügbar.
 
-## Postconditions
+## Ergebnis
 
-### Success Postconditions
+- Die Reservierung ist mit dem Status `Bestätigt` gespeichert.
+- Die Verfügbarkeit ist für den reservierten Zeitraum aktualisiert.
+- Der Gast erhält eine Reservierungsbestätigung.
 
-- Reservation is stored in the system with status "Confirmed"
-- Room availability is updated for the reserved dates
-- Confirmation email is sent to the guest
+## Hauptszenario
 
-### Failure Postconditions
+1. Der Rezeptionsmitarbeiter wählt die Funktion `Neue Reservierung`.
+2. Das System zeigt das Reservierungsformular an.
+3. Der Rezeptionsmitarbeiter erfasst die Kontaktdaten des Gasts.
+4. Der Rezeptionsmitarbeiter wählt Anreise- und Abreisedatum.
+5. Das System zeigt verfügbare Zimmerkategorien für den Zeitraum an.
+6. Der Rezeptionsmitarbeiter wählt eine Zimmerkategorie aus.
+7. Das System berechnet den Gesamtpreis.
+8. Der Rezeptionsmitarbeiter bestätigt die Reservierung.
+9. Das System speichert die Reservierung und zeigt eine Bestätigungsnummer an.
 
-- No reservation is created
-- Room availability remains unchanged
-- System displays an error message to the clerk
+## Alternativszenarien
+
+### A1: Gast existiert bereits
+
+- Auslöser: Die E-Mail-Adresse des Gasts ist bereits gespeichert.
+- Ablauf:
+  1. Das System zeigt die vorhandenen Gastdaten an.
+  2. Der Rezeptionsmitarbeiter bestätigt oder aktualisiert die Gastdaten.
+  3. Der Use Case wird in Schritt 4 des Hauptszenarios fortgesetzt.
+
+## Ausnahmeszenarien
+
+### E1: Keine Zimmer verfügbar
+
+- Auslöser: Für den gewählten Zeitraum ist keine Zimmerkategorie verfügbar.
+- Ablauf:
+  1. Das System zeigt eine Meldung zur fehlenden Verfügbarkeit an.
+  2. Der Rezeptionsmitarbeiter passt den Zeitraum an oder bricht den Vorgang ab.
+  3. Bei angepasstem Zeitraum wird der Use Case in Schritt 4 fortgesetzt,
+     andernfalls endet der Use Case ohne Reservierung.
+
+## Ergänzende Punkte
+
+- Annahme: Bestätigungsnachrichten werden per E-Mail versendet.
+- Offene Frage: Ob Anzahlungen für längere Aufenthalte erforderlich sind.
+- Quelle: FA-001
 
 ## Business Rules
 
-### BR-001: Minimum Stay
+### BR-001: Mindestaufenthalt
 
-Reservations must be for at least one night.
+Reservierungen müssen mindestens eine Übernachtung umfassen.
 
-### BR-002: Advance Booking Limit
+### BR-002: Vorausbuchungsfrist
 
-Reservations cannot be made more than 365 days in advance.
+Reservierungen dürfen höchstens 365 Tage im Voraus erstellt werden.
 
-### BR-003: Deposit Requirement
+## Reference
 
-Reservations of 3 or more nights require a 50% deposit.
+### Status Values
+
+| Status | Description |
+|--------|-------------|
+| Draft | Initial version, still being written. |
+| Review | Complete, awaiting stakeholder review. |
+| Approved | Reviewed and approved for implementation. |
+| Implemented | Implementation complete, pending testing. |
+| Tested | All tests pass, pending final acceptance. |
+| Done | Fully implemented, tested, and accepted. |
+| Obsolete | No longer valid, superseded by another use case. |
+
+### Step Writing Guidelines
+
+| Do | Don't |
+|----|-------|
+| "User clicks Save button" | "User triggers onClick handler" |
+| "System validates the email format" | "System runs regex `/^[\\w]+@[\\w]+$/`" |
+| "System displays error message" | "System throws ValidationException" |
+| "User enters check-in date" | "User populates dateField component" |
+| "System stores the reservation" | "System executes `INSERT INTO reservations...`" |
