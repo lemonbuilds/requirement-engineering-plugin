@@ -77,13 +77,11 @@ unless the project defines other values.
 
 ## Acceptance Criteria
 
-Write acceptance criteria in Given/When/Then form by default:
+Write acceptance criteria as Markdown bullet points by default:
 
-```gherkin
-Given <Ausgangssituation>
-When <Ereignis oder Aktion>
-Then <beobachtbares Ergebnis>
-```
+- The system <observable behavior/result> when <relevant condition or action>.
+- The user <can/cannot> <observable action> when <relevant condition>.
+- <Boundary, exception, or error behavior> is handled with <observable result>.
 
 Each criterion must be objectively testable and must describe observable system
 behavior, not implementation details.

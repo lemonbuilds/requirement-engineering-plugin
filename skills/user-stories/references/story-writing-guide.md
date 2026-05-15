@@ -54,22 +54,16 @@ Apply these language rules:
 - Estimable: Add missing scope boundaries, data objects, or business rules.
 - Small: Split stories that require multiple roles, workflows, objects, or
   outcomes.
-- Testable: Add Given/When/Then criteria with observable results.
+- Testable: Add bullet-point criteria with observable results.
 
 ## Acceptance Criteria Patterns
 
-Use Given/When/Then for behavior:
-
-```gherkin
-Given the customer has items in the cart
-When the customer submits the order
-Then the system creates an order confirmation with a unique order number
-```
-
-Use bullet criteria only for simple factual constraints:
+Use Markdown bullet points for acceptance criteria:
 
 - The export file contains order number, order date, status, and total amount.
 - The system keeps cancelled reservations visible for 90 days.
+- After the customer submits an order with items in the cart, the system creates
+  an order confirmation with a unique order number.
 
 Every criterion should identify:
 
@@ -138,12 +132,10 @@ Bestellungen dauerhaft verwalten kann.
 
 ## Akzeptanzkriterien
 
-```gherkin
-Given eine noch nicht registrierte E-Mail-Adresse
-When der Neukunde die Registrierung absendet
-Then erstellt das System ein Kundenkonto
-And sendet eine Bestätigungs-E-Mail
-```
+- Wenn der Neukunde die Registrierung mit einer noch nicht registrierten
+  E-Mail-Adresse absendet, erstellt das System ein Kundenkonto.
+- Nach erfolgreicher Registrierung sendet das System eine Bestätigungs-E-Mail
+  an die angegebene E-Mail-Adresse.
 
 ## Traceability
 
