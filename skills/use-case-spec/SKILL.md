@@ -63,8 +63,8 @@ und kennzeichne Annahmen ausdrücklich.
    Berechtigungen, nicht verfügbare Systeme oder abgebrochene Abläufe
 9. Beschreibe das `Ergebnis` als beobachtbaren Zustand nach erfolgreichem
    Abschluss und relevante Zustände bei Fehler oder Abbruch
-10. Dokumentiere Annahmen, Hinweise, Traceability und offene Fragen unter
-    `Ergänzende Punkte`
+10. Dokumentiere Abgrenzungen, Annahmen, offene Fragen und Quellen unter
+    `Ergänzende Punkte` in den gleichnamigen Unterüberschriften
 11. Dokumentiere fachliche Regeln separat unter `Business Rules`
 12. Verwende die Statuswerte und Schreibregeln aus
     `references/use-case-reference.md`, aber gib sie nicht als eigenen
@@ -82,7 +82,9 @@ und kennzeichne Annahmen ausdrücklich.
 - Das `Hauptszenario` ist nummeriert und erreicht das Ziel des Akteurs
 - Alternativ- und Ausnahmeszenarien nennen einen klaren Auslöser und einen
   Rücksprungpunkt oder Endzustand
-- Ergänzende Punkte sind konkret und für diesen Use Case relevant
+- `Ergänzende Punkte` enthält genau die Unterüberschriften `Abgrenzungen`,
+  `Annahmen`, `Offene Fragen` und `Quellen`; Einträge darunter stehen als
+  Stichpunkte ohne Präfixe wie `Annahme:`, `Offene Frage:` oder `Quelle:`
 - Business Rules stehen in einem separaten Abschnitt und sind nicht unter
   `Ergänzende Punkte` vermischt
 - Schritte beschreiben beobachtbares Verhalten, keine Implementierungsdetails

@@ -64,9 +64,21 @@ Draft | Review | Approved | Implemented | Tested | Done | Obsolete
 
 ## Ergänzende Punkte
 
-- Annahme: [Explizite Annahme]
-- Offene Frage: [Noch zu klärender Punkt]
-- Quelle: [Anforderung, Use-Case-Diagramm oder Stakeholder-Hinweis]
+### Abgrenzungen
+
+- [Was dieser Use Case ausdrücklich nicht umfasst]
+
+### Annahmen
+
+- [Explizite Annahme]
+
+### Offene Fragen
+
+- [Noch zu klärender Punkt]
+
+### Quellen
+
+- [Anforderung, Use-Case-Diagramm oder Stakeholder-Hinweis]
 
 ## Business Rules
 
