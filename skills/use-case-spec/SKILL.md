@@ -24,7 +24,7 @@ fordert ausdrücklich eine andere Sprache.
 Erstelle oder aktualisiere genau eine Use-Case-Beschreibung für $ARGUMENTS in
 `docs/use_cases/`.
 
-Verwende [templates/use-case.md](templates/use-case.md) als verbindliche
+Verwende [assets/use-case.md](assets/use-case.md) als verbindliche
 Struktur.
 
 Benenne die Ausgabedatei `UC-XXX-short-name.md`, zum Beispiel

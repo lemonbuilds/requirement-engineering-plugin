@@ -1,0 +1,4 @@
+interface:
+  display_name: "Use Case Diagram"
+  short_description: "Create PlantUML use case diagrams"
+  default_prompt: "Use $use-case-diagram to create a PlantUML use case diagram from the requirements."

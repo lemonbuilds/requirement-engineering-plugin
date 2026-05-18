@@ -5,8 +5,8 @@ description: >
   Anforderungskatalog mit funktionalen Anforderungen (Satzschablonen),
   messbaren nicht-funktionalen Anforderungen und Randbedingungen. Verwenden,
   wenn der User Anforderungen schreiben, ein PRD erstellen, Anforderungen
-  sammeln, Feature-Spezifikationen dokumentieren, User Stories formulieren,
-  Qualitätsanforderungen definieren oder Randbedingungen auflisten möchte.
+  sammeln, Feature-Spezifikationen dokumentieren, Qualitätsanforderungen
+  definieren oder Randbedingungen auflisten möchte.
 ---
 
 # Requirements Engineer
@@ -184,19 +184,3 @@ Das Ergebnis soll standardmässig diese Abschnitte enthalten:
 - Wenn der User keine Quelle liefert, erstelle einen ersten Entwurf auf Basis plausibler Annahmen und kennzeichne diese sauber
 - Halte die Formulierungen konkret, testbar und fachlich nachvollziehbar
 - Bevorzuge klare deutsche Begriffe; übernimm englische Labels nur, wenn sie projektweit etabliert sind
-
-## Trigger-Beispiele
-
-Diese Skill ist passend bei Formulierungen wie:
-
-- `Schreibe Anforderungen`
-- `Erstelle ein PRD`
-- `Sammle Anforderungen für dieses Feature`
-- `Dokumentiere die Feature-Spezifikation`
-- `Formuliere Anforderungen gemäß der Satzschablonen`
-- `Definiere NFRs`
-- `Liste Randbedingungen`
-- `requirements catalog`
-- `requirements analysis`
-- `product requirements document`
-- `feature specification`
