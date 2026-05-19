@@ -1,0 +1,4 @@
+interface:
+  display_name: "Requirements"
+  short_description: "Create structured requirement catalogs"
+  default_prompt: "Use $requirements to create a structured requirement catalog from the product brief."
