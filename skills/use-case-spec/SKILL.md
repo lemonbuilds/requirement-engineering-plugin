@@ -6,7 +6,9 @@ description: >
   scenario, alternative scenarios, exception scenarios, supplementary points,
   and business rules. Use when the user asks to "write a use case", "specify a
   use case", "document system behavior", "define scenarios", "write a
-  functional spec", or mentions use case specification.
+  functional spec", "document my project long-term with use case
+  descriptions", requests prose or table format for use case descriptions, or
+  mentions use case specification.
 ---
 
 # Use Case Specification
@@ -24,8 +26,14 @@ fordert ausdrücklich eine andere Sprache.
 Erstelle oder aktualisiere genau eine Use-Case-Beschreibung für $ARGUMENTS in
 `docs/use_cases/`.
 
-Verwende [assets/use-case.md](assets/use-case.md) als verbindliche
-Struktur.
+Wähle die Vorlage ausschliesslich anhand des gewünschten Formats:
+
+- Verwende [assets/use-case.md](assets/use-case.md) für Fliesstext,
+  klassische Use-Case-Beschreibungen oder wenn kein Format genannt wird.
+- Verwende [assets/use-case-table.md](assets/use-case-table.md), wenn der User
+  ein Tabellenformat, eine tabellarische Use-Case-Beschreibung oder "als
+  Tabelle" verlangt.
+
 
 Benenne die Ausgabedatei `UC-XXX-short-name.md`, zum Beispiel
 `docs/use_cases/UC-012-bestellung-im-kundenauftrag-abschliessen.md`.
@@ -52,29 +60,34 @@ und kennzeichne Annahmen ausdrücklich.
 1. Lies das Anforderungsdokument und das Use-Case-Diagramm
 2. Identifiziere genau den einen zu dokumentierenden Use Case
 3. Erstelle `docs/use_cases/`, falls der Ordner nicht existiert
-4. Fülle die Pflichtabschnitte in dieser Reihenfolge: ID, Name, Autoren, Status,
+4. Wähle die passende Vorlage nur anhand des Formats: standardmässig und bei
+   Fliesstext `assets/use-case.md`, bei Tabellenformat ausdrücklich
+   `assets/use-case-table.md`
+5. Fülle die Pflichtabschnitte in dieser Reihenfolge: ID, Name, Autoren, Status,
    Auslösendes Ereignis, Akteure, Ziel, Vorbedingungen, Ergebnis,
    Hauptszenario, Alternativszenarien, Ausnahmeszenarien, Ergänzende Punkte,
    Business Rules
-5. Definiere Vorbedingungen, die vor Start des Use Cases erfüllt sein müssen
-6. Schreibe das `Hauptszenario` als nummerierte Interaktion zwischen Akteur und System
-7. Identifiziere `Alternativszenarien` für optionale oder gültige Varianten
-8. Identifiziere `Ausnahmeszenarien` für Fehler, ungültige Eingaben, fehlende
+6. Definiere Vorbedingungen, die vor Start des Use Cases erfüllt sein müssen
+7. Schreibe das `Hauptszenario` als nummerierte Interaktion zwischen Akteur und System
+8. Identifiziere `Alternativszenarien` für optionale oder gültige Varianten
+9. Identifiziere `Ausnahmeszenarien` für Fehler, ungültige Eingaben, fehlende
    Berechtigungen, nicht verfügbare Systeme oder abgebrochene Abläufe
-9. Beschreibe das `Ergebnis` als beobachtbaren Zustand nach erfolgreichem
+10. Beschreibe das `Ergebnis` als beobachtbaren Zustand nach erfolgreichem
    Abschluss und relevante Zustände bei Fehler oder Abbruch
-10. Dokumentiere Abgrenzungen, Annahmen, offene Fragen und Quellen unter
+11. Dokumentiere Abgrenzungen, Annahmen, offene Fragen und Quellen unter
     `Ergänzende Punkte` in den gleichnamigen Unterüberschriften
-11. Dokumentiere fachliche Regeln separat unter `Business Rules`
-12. Verwende die Statuswerte und Schreibregeln aus
+12. Dokumentiere fachliche Regeln separat unter `Business Rules`
+13. Verwende die Statuswerte und Schreibregeln aus
     `references/use-case-reference.md`, aber gib sie nicht als eigenen
     `Reference`-Abschnitt im Use-Case-Dokument aus
-13. Prüfe die Beschreibung auf Vollständigkeit, Klarheit und Nachvollziehbarkeit
+14. Prüfe die Beschreibung auf Vollständigkeit, Klarheit und Nachvollziehbarkeit
 
 ## Quality Checks
 
 - Der Use Case hat genau eine `ID`
 - Die Abschnitte folgen der verbindlichen deutschen Struktur und Benennung
+- Bei angefordertem Tabellenformat folgt das Dokument
+  `assets/use-case-table.md` und enthält die Use-Case-Inhalte in der Tabelle
 - `Status` verwendet genau einen dieser Werte: `Draft`, `Review`, `Approved`,
   `Implemented`, `Tested`, `Done`, `Obsolete`
 - `Auslösendes Ereignis`, `Akteure`, `Ziel`, `Vorbedingungen` und `Ergebnis`
