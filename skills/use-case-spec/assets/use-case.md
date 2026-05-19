@@ -46,19 +46,14 @@ Draft | Review | Approved | Implemented | Tested | Done | Obsolete
 
 ## Alternativszenarien
 
-### A1: [Name des Alternativszenarios]
-
-- Auslöser: [Bedingung, die dieses Szenario auslöst]
+[Schritt X]: [Bedingung, die dieses Szenario auslöst]:
 - Ablauf:
   1. [Schritt, der vom Hauptszenario abweicht]
   2. [Fortsetzung oder Rückkehr ins Hauptszenario]
 
 ## Ausnahmeszenarien
 
-### E1: [Name des Ausnahmeszenarios]
-
-- Auslöser: [Fehler, ungültige Eingabe, fehlende Berechtigung oder Abbruch]
-- Ablauf:
+[Schritt X]: [Fehler, ungültige Eingabe, fehlende Berechtigung oder Abbruch]:
   1. [Systemreaktion oder Akteurshandlung]
   2. [Endzustand oder Rückkehrpunkt]
 
