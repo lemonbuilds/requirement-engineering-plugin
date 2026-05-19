@@ -1,4 +1,0 @@
-interface:
-  display_name: "Use Case Specification"
-  short_description: "Write detailed use case specifications"
-  default_prompt: "Use $use-case-spec to write a detailed German use case specification."

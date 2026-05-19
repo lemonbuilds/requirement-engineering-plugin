@@ -1,4 +1,0 @@
-interface:
-  display_name: "User Stories"
-  short_description: "Write and refine agile user stories"
-  default_prompt: "Use $user-stories to write backlog-ready user stories with acceptance criteria."
