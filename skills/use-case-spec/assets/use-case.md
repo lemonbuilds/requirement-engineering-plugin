@@ -46,15 +46,15 @@ Draft | Review | Approved | Implemented | Tested | Done | Obsolete
 
 ## Alternativszenarien
 
-[Schritt X]: [Bedingung, die dieses Szenario auslöst]:
-  - [Schritt, der vom Hauptszenario abweicht]
-  - [Fortsetzung oder Rückkehr ins Hauptszenario]
+Schritt X: Bedingung, die dieses Szenario auslöst:
+  - Schritt, der vom Hauptszenario abweicht
+  - Fortsetzung oder Rückkehr ins Hauptszenario
 
 ## Ausnahmeszenarien
 
-[Schritt X]: [Fehler, ungültige Eingabe, fehlende Berechtigung oder Abbruch]:
-  - [Systemreaktion oder Akteurshandlung]
-  - [Endzustand oder Rückkehrpunkt]
+Schritt X: Fehler, ungültige Eingabe, fehlende Berechtigung oder Abbruch:
+  - Systemreaktion oder Akteurshandlung
+  - Endzustand oder Rückkehrpunkt
 
 ## Ergänzende Punkte
 

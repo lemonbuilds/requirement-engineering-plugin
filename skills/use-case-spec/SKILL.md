@@ -51,6 +51,7 @@ und kennzeichne Annahmen ausdrücklich.
 - Vage oder unvollständige Szenarien schreiben
 - Nummerierte Schritte im `Hauptszenario` weglassen
 - Relevante Alternativ- oder Ausnahmeszenarien weglassen
+- Eckige Platzhalter aus den Vorlagen im finalen Dokument stehen lassen
 - `Ergebnis` undefiniert lassen
 - Mehrere Use Cases in einem Dokument vermischen
 - Technische Implementierungsdetails in Ablaufschritten verwenden
@@ -70,8 +71,12 @@ und kennzeichne Annahmen ausdrücklich.
 6. Definiere Vorbedingungen, die vor Start des Use Cases erfüllt sein müssen
 7. Schreibe das `Hauptszenario` als nummerierte Interaktion zwischen Akteur und System
 8. Identifiziere `Alternativszenarien` für optionale oder gültige Varianten
+   und formuliere die Überschrift ohne eckige Klammern im Format
+   `Schritt 4: Alternative Bedingung:`
 9. Identifiziere `Ausnahmeszenarien` für Fehler, ungültige Eingaben, fehlende
-   Berechtigungen, nicht verfügbare Systeme oder abgebrochene Abläufe
+   Berechtigungen, nicht verfügbare Systeme oder abgebrochene Abläufe und
+   formuliere die Überschrift ohne eckige Klammern im Format
+   `Schritt 7: Fehlerbedingung:`
 10. Beschreibe das `Ergebnis` als beobachtbaren Zustand nach erfolgreichem
    Abschluss und relevante Zustände bei Fehler oder Abbruch
 11. Dokumentiere Abgrenzungen, Annahmen, offene Fragen und Quellen unter
@@ -95,6 +100,8 @@ und kennzeichne Annahmen ausdrücklich.
 - Das `Hauptszenario` ist nummeriert und erreicht das Ziel des Akteurs
 - Alternativ- und Ausnahmeszenarien nennen einen klaren Auslöser und einen
   Rücksprungpunkt oder Endzustand
+- Das generierte Use-Case-Dokument enthält keine eckigen Platzhalter wie
+  `[Schritt X]`, `[Bedingung]`, `[Name]` oder `[Description]`
 - `Ergänzende Punkte` enthält genau die Unterüberschriften `Abgrenzungen`,
   `Annahmen`, `Offene Fragen` und `Quellen`; Einträge darunter stehen als
   Stichpunkte ohne Präfixe wie `Annahme:`, `Offene Frage:` oder `Quelle:`
